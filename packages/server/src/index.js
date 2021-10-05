@@ -10,4 +10,6 @@ app.use(bodyParser.urlencoded ({ extended: false }));
 
 app.get('/', (req, res) => res.send('Hello World!'));
 
+require('./controllers/authController')(app);
+
 app.listen(port, () => console.log(`App is running!`));
