@@ -21,4 +21,19 @@ router.post('/register', async (req, res) => {
   }
 });
 
+router.get('/users', async (req, res) => {
+  try {    
+    
+    const users = await User.find();
+    users.password = undefined;
+
+    return res.send({ users });
+
+  } catch (err) {
+    return res.status(400).send({ error: 'Ops!'})  ;  
+  }
+
+
+});
+
 module.exports = app => app.use('/auth', router);
