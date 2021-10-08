@@ -9,5 +9,8 @@
   },
   "keywords": [],
   "author": "Allyson Halley",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "jsonwebtoken": "^8.5.1"
+  }
 }
